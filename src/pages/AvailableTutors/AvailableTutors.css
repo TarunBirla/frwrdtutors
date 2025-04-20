@@ -1,0 +1,66 @@
+.tutor-card {
+  background-color: #f2edfc;
+  border-radius: 15px;
+  border: none;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tutor-img {
+  width: 65px;
+  height: 65px;
+  /* border-radius: 50%; */
+  object-fit: cover;
+}
+
+.tutor-name {
+  font-weight: 700;
+  font-size: 16px;
+  color: #2c2c7c;
+}
+
+.subject-badge {
+  display: inline-block;
+  background-color: white;
+  border-radius: 20px;
+  padding: 3px 10px;
+  margin-right: 5px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #333;
+  margin-top: 5px;
+}
+
+.tutor-desc {
+  font-size: 14px;
+  color: #2c2c2c;
+  margin: 10px 0;
+}
+
+.tutor-rating {
+  display: flex;
+  align-items: center;
+  color: #2c2c2c;
+  font-size: 14px;
+}
+
+.tutor-rating .fa-star {
+  color: orange;
+  margin-right: 5px;
+}
+
+.select-btn {
+  background-color: #4dc591;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 20px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.select-btn:hover {
+  background-color: #3da97d;
+}

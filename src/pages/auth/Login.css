@@ -1,0 +1,129 @@
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  html, body {
+    height: 100%;
+    /* overflow: hidden;  */
+    font-family: 'SF UI Display', sans-serif;
+
+  }
+  
+  /* Outer container to control full height layout */
+  .page-wrapper {
+    background: linear-gradient(to bottom, #6A1B9A, #8E24AA);
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  /* Logo */
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .login-logo {
+    width: 231px;
+    height: auto;
+  }
+  
+  /* Container */
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  /* Card */
+  .login-card {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+    text-align: left;
+  }
+  
+  /* Header row */
+  .login-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Title */
+  .login-title {
+    font-size: 15px;
+    color: #000;
+  }
+  
+  /* Lock image */
+  .login-lock-img {
+    width: 57px;
+    height: 57px;
+  }
+  
+  /* Form */
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .login-form label {
+    font-weight: 500;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .login-form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+  }
+  
+  /* Forgot password */
+  .forgot-password {
+    text-align: right;
+    font-size: 12px;
+    color: #6A1B9A;
+    cursor: pointer;
+  }
+  
+  /* Button */
+  .login-button {
+    background: #6A1B9A;
+    color: white;
+    padding: 8px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 50%;
+    align-self: flex-end;
+  }
+  
+  .login-button:hover {
+    background: #4A148C;
+  }
+  
+  /* Footer text */
+  .logo-container span {
+    color: #fff;
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  

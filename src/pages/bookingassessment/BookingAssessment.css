@@ -1,0 +1,112 @@
+.booking-assessment-container {
+    max-width: 600px;
+    margin: 30px auto;
+    font-family: 'SF UI Display', sans-serif;
+    color: #131c55;
+    padding: 20px;
+  }
+  
+  .success-card {
+    background-color: #65c68f;
+    color: white;
+    padding: 30px 20px;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .success-card1 {
+    background-color: #803F97;
+    color: white;
+    padding: 30px 20px;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .success-icon {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+  
+  .success-card h2 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  .success-card p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  .section h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+  
+  .assessment-info {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f3f3f3;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .info-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 150px;
+    margin-bottom: 10px;
+  }
+  
+  .info-row .label {
+    font-size: 12px;
+    color: #777;
+  }
+  
+  .blocked-class {
+    background-color: #efedff;
+    padding: 12px 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .icon {
+    font-size: 16px;
+    margin-right: 5px;
+  }
+  
+  .payment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* optional spacing */
+  }
+  
+  .paymentbutton {
+    background-color: #65C68F;
+    padding: 10px 20px;
+    color: #eee;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .paymentbutton:hover {
+    background-color: #58b07e;
+  }
+  .payheading{
+    text-align: center;
+    font-size: 24px; /* optional styling */
+    margin: 20px 0;
+  }

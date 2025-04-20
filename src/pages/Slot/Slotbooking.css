@@ -1,0 +1,332 @@
+.slot-booking-container {
+    padding: 20px;
+    /* max-width: 800px; */
+    margin: auto;
+  }
+  
+  .subject-filter {
+    margin: 10px 0;
+  }
+  
+  .filter-btn {
+    background-color: #65C68F;
+    color: white;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .filter-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .filter-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .info-text {
+    margin: 15px 0;
+  }
+  
+
+  
+  .calendar-week {
+    margin: 20px 0;
+  }
+  
+  .week-days {
+    display: flex;
+    justify-content: space-between;
+    background: #f7f7f7;
+    padding: 10px;
+    border-radius: 10px;
+    overflow-x: auto;
+  }
+  
+  .day-cell {
+    text-align: center;
+    padding: 10px;
+    flex: 1;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.3s;
+  }
+  
+  .day-cell.active {
+    background-color: #4c4cfa;
+    color: white;
+  }
+  
+  .day-name {
+    font-weight: bold;
+    font-size: 14px;
+  }
+  
+  .day-date {
+    font-size: 16px;
+  }
+  
+  
+  .slots-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+  
+  .slot-btn {
+    padding: 10px 20px;
+    border: none;
+    background-color: #eee;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .slot-card {
+    background: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .action-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+  
+  .assessment-btn,
+  .book-btn {
+    flex: 1;
+    padding: 10px;
+    margin: 0 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .assessment-btn {
+    background-color: #49479D;
+  }
+  
+  .book-btn {
+    background-color: #803F97;
+  }
+  .filter-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    z-index: 999;
+  }
+  
+  .filter-popup-white {
+    background: #ffffff;
+    width: 100%;
+    max-width: 500px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .filter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .filter-header h4 {
+    font-size: 18px;
+    margin: 0;
+    color: #2c2c2c;
+  }
+  
+  .done-btn {
+    background-color: #4c4cfa;
+    color: white;
+    padding: 6px 14px;
+    border: none;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .subject-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .subject-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 10px;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  .subject-icon {
+    font-size: 18px;
+  }
+  .subjects {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .subject-btn {
+    padding: 10px 20px;
+    background-color: #e0f0ff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .week-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .nav-btn {
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0 10px;
+    color: #4c4cfa;
+  }
+  
+  .nav-btn:hover {
+    color: #2c2ccf;
+  }
+  .current-month {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  .slotselect {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .slot-card {
+    position: relative;
+    background-color: #f0edff; /* Light purple */
+    border-radius: 20px;
+    padding: 20px;
+    min-width: 200px;
+    max-width: 240px;
+    color: #131c55;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .slot-card:nth-child(even) {
+    background-color: #fdf1fb; /* Light pink alternate */
+  }
+  
+  .slot-time {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .slot-time .icon {
+    margin-right: 8px;
+    font-size: 22px;
+  }
+  
+  .slot-name {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+  
+  .slot-subject {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 8px 16px;
+    border-radius: 30px;
+    display: inline-block;
+    font-weight: 500;
+    color: #131c55;
+  }
+  
+  .slot-remove {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    color: #888;
+    cursor: pointer;
+  }
+  .assessment-btn-free {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    background-color: #49479D;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 20px; /* this pushes it to the left, keeping space on the right */
+  }
+  
+  .assessment-btn-free:hover {
+    background-color: #3a3886;
+  }
+  .modal-footer.center-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* optional spacing */
+  }
+  
+  .wanttopaybutton {
+    background-color: #65C68F;
+    padding: 10px 20px;
+    color: #eee;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .wanttopaybutton:hover {
+    background-color: #58b07e;
+  }
+  
+ 

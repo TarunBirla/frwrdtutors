@@ -1,0 +1,139 @@
+.package-container {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+  }
+  
+  .package-container h4 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 2rem;
+  }
+  
+  .package-grid {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .package-link {
+    text-decoration: none;
+  }
+  
+  .package-card {
+    width: 300px;
+    padding: 1.5rem;
+    border-radius: 16px;
+    color: white;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .package-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .package-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .package-header h4 {
+    font-size: 20px;
+    font-weight: 700;
+  }
+  
+  .class-count {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .feature-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 1rem;
+  }
+  
+  .feature-list li {
+    margin-bottom: 0.5rem;
+    font-size: 14px;
+  }
+  
+  /* Color themes */
+  .silver-card {
+    background: linear-gradient(to right, #00B9BF, #008DDF);
+  }
+  
+  .gold-card {
+    background: linear-gradient(to right, #F6CD82, #DAA951);
+  }
+  
+  .basic-card {
+    background: linear-gradient(to right, #FEA558, #F65D73);
+  }
+  
+  .platinum-card {
+    background: linear-gradient(to right, #7CC746, #0AC4B1);
+  }
+  
+  /* Popular Badge */
+  .badge {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #EBEAFC;
+    color: #000;
+    font-weight: bold;
+    padding: 0.3rem 0.6rem;
+    font-size: 12px;
+    border-radius: 8px;
+  }
+  .slider-card {
+    background-color: #EBEAFC;
+    border-radius: 16px;
+    padding: 20px;
+    height: 160px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+  
+  .active-border {
+    /* border: 2px solid #6c63ff; */
+    background-color: #f4f4ff;
+  }
+  
+  .custom-range {
+    accent-color: #6c2bd9; /* Dark purple */
+    height: 8px;
+    border-radius: 5px;
+    background: #F3E9F6;
+    cursor: pointer;
+  }
+  
+  .custom-footer {
+    justify-content: center;
+    padding: 20px 0;
+  }
+  
+  .custom-button {
+    background-color: #803F97;
+    color: #fff;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+  }
+  
+  .custom-button:hover,
+  .custom-button:focus,
+  .custom-button:active {
+    background-color: #803F97; /* Same color on all states */
+    color: #fff;
+    outline: none;
+    box-shadow: none;
+  }
+    
