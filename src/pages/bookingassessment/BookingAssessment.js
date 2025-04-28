@@ -1,9 +1,25 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './BookingAssessment.css';
 import Topheader from '../topheader/topheader';
 import { Link } from 'react-router-dom';
 
 const BookingAssessment = () => {
+
+  const [slot, setSlot] = useState(null); // Use null as default
+
+  useEffect(() => {
+    const storedSlot = localStorage.getItem("slots");
+    if (storedSlot) {
+      try {
+        const parsedSlot = JSON.parse(storedSlot);
+        setSlot(parsedSlot);
+      } catch (err) {
+        console.error("Invalid JSON in localStorage:", err);
+      }
+    }
+  }, []);
+
+
   return (
     <>
     <Topheader/>
@@ -21,19 +37,19 @@ const BookingAssessment = () => {
         <Link to='/getway'>
         <h3>Assessment</h3>
         </Link>
-
+        {slot && (
         <div className="assessment-info">
           <div className="info-row">
             <span className="icon">📅</span>
             <div>
-              <strong>Monday 16, February 2025</strong>
+              <strong>{slot.day}</strong>
               <div className="label">Date</div>
             </div>
           </div>
           <div className="info-row">
             <span className="icon">⏰</span>
             <div>
-              <strong>9:00</strong>
+              <strong>{slot.startTime} -- {slot.endTime}</strong>
               <div className="label">Time</div>
             </div>
           </div>
@@ -44,10 +60,18 @@ const BookingAssessment = () => {
               <div className="label">Duration</div>
             </div>
           </div>
+          <div className="info-row">
+            <span className="icon">📘</span>
+            <div>
+              <strong>{slot.subject}</strong>
+              <div className="label">Subject</div>
+            </div>
+          </div>
         </div>
+      )}
       </div>
 
-      <div className="section">
+      {/* <div className="section">
         <h3>Blocked Classes</h3>
         <div className="blocked-class">
           <span className="icon">📅</span> Monday 16
@@ -63,7 +87,7 @@ const BookingAssessment = () => {
           <span className="icon">📅</span> Friday 20
           <span className="icon">⏰</span> 9:00
         </div>
-      </div>
+      </div> */}
     </div>
     </>
 

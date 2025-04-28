@@ -26,6 +26,9 @@ const Login = () => {
       const res = await axios.post('http://localhost:4500/api/login', formData);
       if (res.data.success) {
         toast.success('Login successful!');
+        localStorage.setItem("firstname",res.data.user.studentfirstname)
+        localStorage.setItem("studentid",res.data.user.studentid)
+        localStorage.setItem("lastname",res.data.user.studentlastname)
         setTimeout(() => {
           navigate('/dashbord');
         }, 2000);

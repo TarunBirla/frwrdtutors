@@ -22,11 +22,11 @@ const Routs = () => {
         <Route path="/forget" element={<ForgetPassword />} />
         <Route path="/changepassword/:id" element={<ChnagePassword />} />
         <Route path="/dashbord" element={<Dashbord />} />
-        <Route path="/package" element={<Package />} />
-        <Route path="/packagedetails/:type" element={<Packagedetails/>} />
-        <Route path="/slotbooking" element={<SlotBooking/>} />
+        <Route path="/package/:id" element={<Package />} />
+        <Route path="/packagedetails/:tutorid/:id" element={<Packagedetails/>} />
+        <Route path="/slotbooking/:id" element={<SlotBooking/>} />
         <Route path="/availabletutors" element={<AvailableTutors/>} />
-        <Route path="/assessment" element={<FreeAssessment/>} />
+        <Route path="/assessment/:id" element={<FreeAssessment/>} />
         <Route path="/bookingassessment" element={<BookingAssessment/>} />
         <Route path="/getway" element={<GetwayPayment/>} />
         <Route path="/paymentgetway" element={<PaymentGetway/>} />

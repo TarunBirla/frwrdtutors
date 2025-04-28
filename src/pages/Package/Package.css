@@ -64,19 +64,19 @@
   }
   
   /* Color themes */
-  .silver-card {
+  .SILVER {
     background: linear-gradient(to right, #00B9BF, #008DDF);
   }
   
-  .gold-card {
+  .GOLD {
     background: linear-gradient(to right, #F6CD82, #DAA951);
   }
   
-  .basic-card {
+  .BASIC {
     background: linear-gradient(to right, #FEA558, #F65D73);
   }
   
-  .platinum-card {
+  .PLATINUM {
     background: linear-gradient(to right, #7CC746, #0AC4B1);
   }
   

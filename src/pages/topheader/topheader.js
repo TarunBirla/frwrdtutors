@@ -10,14 +10,20 @@ import {
 import logo from '../../assets/image/logo.png';
 import profileimage from '../../assets/image/profileimage.png';
 import './topheader.css';
+import { useNavigate } from 'react-router-dom';
 
 const Topheader = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+const navigate =useNavigate();
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const Logoutprofile = () =>{
+    localStorage.clear(); 
+
+    navigate("/")
+  }
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-light bgcolorheader">
@@ -44,7 +50,7 @@ const Topheader = () => {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link text-white d-flex align-items-center" href="#">
+              <a className="nav-link text-white d-flex align-items-center" onClick={Logoutprofile}>
                 <FaSignOutAlt className="mr-2" /> Logout
               </a>
             </li>

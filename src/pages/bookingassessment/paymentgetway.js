@@ -1,8 +1,21 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './BookingAssessment.css';
 import Topheader from '../topheader/topheader';
 
 const PaymentGetway = () => {
+
+  const [slots, setSlots] = useState([]);
+
+  useEffect(() => {
+    const storedSlots = localStorage.getItem("slots");
+    if (storedSlots) {
+      try {
+        setSlots(JSON.parse(storedSlots));
+      } catch (err) {
+        console.error("Invalid JSON in localStorage:", err);
+      }
+    }
+  }, []);
   return (
     <>
     <Topheader/>
@@ -20,20 +33,15 @@ const PaymentGetway = () => {
 
       <div className="section">
         <h3>Blocked Classes</h3>
-        <div className="blocked-class">
-          <span className="icon">📅</span> Monday 16
-          <span className="icon">⏰</span> 9:00
-          <span className="icon">⏰</span> 12:00
+        {slots.map((slot, index) => (
+        <div key={index} className="blocked-class">
+          <span className="icon">📅</span> {slot.day}
+          <span className="icon">⏰</span> {slot.startTime}
+          <span className="icon">⏰</span> {slot.endTime}
+          <span className="icon">⏰</span> {slot.subject}
         </div>
-        <div className="blocked-class">
-          <span className="icon">📅</span> Wednesday 18,
-          <span className="icon">⏰</span> 9:00
-          <span className="icon">⏰</span> 12:00
-        </div>
-        <div className="blocked-class">
-          <span className="icon">📅</span> Friday 20
-          <span className="icon">⏰</span> 9:00
-        </div>
+      ))}
+        
       </div>
     </div>
     </>

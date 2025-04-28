@@ -1,60 +1,46 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Package.css';
 import Topheader from '../topheader/topheader';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
+import axios from 'axios';
 
-const packages = [
-  {
-    type: 'BASIC',
-    classes: '6 Classes',
-    features: [
-      '60 min classes',
-      '6 classes covering 1 Half Term',
-      'No free cancellations',
-    ],
-    color: 'basic-card',
-  },
-  {
-    type: 'Silver',
-    classes: '6 Classes',
-    features: [
-      '60 min classes',
-      '6 classes covering 1 Half Term',
-      'No free cancellations',
-    ],
-    color: 'silver-card',
-  },
-  {
-    type: 'Gold',
-    classes: '12 Classes',
-    features: [
-      '60 min classes',
-      '12 classes covering 1 Full Term',
-      '1st Preference Weekends',
-      'Post Lesson Reports',
-      'End of Term Report',
-      '2 Free reschedules',
-    ],
-    color: 'gold-card',
-    popular: true,
-  },
-  {
-    type: 'Platinum',
-    classes: '12 Classes',
-    features: [
-      '60 min classes',
-      '12 classes covering 1 Full Term',
-      '1st Preference Weekends',
-      'Post Lesson Reports',
-      'End of Term Report',
-      '2 Free reschedules',
-    ],
-    color: 'platinum-card',
-    popular: true,
-  },
-];
+
+
 
 const Package = () => {
+  const {id} =useParams()
+  const [packages,setPackages]=useState([])
+const [tutorid,setTutorid]=useState("")
+
+useEffect(() => {
+  const fetchSubjects = async () => {
+    try {
+      const response = await axios.get('http://localhost:4500/api/allpackega');
+      setPackages(response.data);
+      console.log('response',response.data);
+      
+    } catch (error) {
+      console.error('Error fetching subjects:', error);
+    }
+  };
+  fetchSubjects();
+}, []);
+
+useEffect(() => {
+  const fetchSubjects = async () => {
+    try {
+      const response = await axios.get(`http://localhost:4500/api/contractorsbyid/${id}`);
+      setTutorid(response?.data?.id);
+      // console.log('contractorsbyid???',response?.data?.id);
+      
+    } catch (error) {
+      console.error('Error fetching subjects:', error);
+    }
+  };
+  fetchSubjects();
+}, []);
+
+
   return (
     <>
       <Topheader />
@@ -63,18 +49,15 @@ const Package = () => {
 
         <div className="package-grid">
           {packages.map((pkg, index) => (
-            <Link to={`/packagedetails/${pkg.type}`} key={index} className="package-link">
-              <div className={`package-card ${pkg.color}`}>
+            <Link to={`/packagedetails/${tutorid}/${pkg.id}`} key={index} className="package-link">
+              <div className={`package-card ${pkg.name}`}>
                 <div className="package-header">
-                  <h4>{pkg.type.toUpperCase()}</h4>
-                  <span className="class-count">{pkg.classes}</span>
+                  <h4>{pkg.name.toUpperCase()}</h4>
+                  <span className="class-count">{pkg.numberofclass} Classes</span>
                 </div>
                 <ul className="feature-list">
-                  {pkg.features.map((feature, i) => (
-                    <li key={i}>✔ {feature}</li>
-                  ))}
+                <li dangerouslySetInnerHTML={{ __html: pkg.description }}></li>
                 </ul>
-                {pkg.popular && <div className="badge">Most Popular</div>}
               </div>
             </Link>
           ))}
