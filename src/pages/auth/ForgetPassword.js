@@ -24,7 +24,7 @@ const ForgetPassword = () => {
     }
 
     try {
-      const res = await axios.post('http://localhost:4500/api/forget_password', { email });
+      const res = await axios.post('https://apifrwrd.smplyrefer.com/api/forget_password', { email });
 
       if (res.data.success) {
         toast.success('Reset link sent to your email');

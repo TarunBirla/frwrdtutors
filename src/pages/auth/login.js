@@ -23,7 +23,7 @@ const Login = () => {
     }
 
     try {
-      const res = await axios.post('http://localhost:4500/api/login', formData);
+      const res = await axios.post('https://apifrwrd.smplyrefer.com/api/login', formData);
       if (res.data.success) {
         toast.success('Login successful!');
         localStorage.setItem("firstname",res.data.user.studentfirstname)

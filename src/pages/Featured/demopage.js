@@ -44,7 +44,7 @@ const ClientForm = () => {
 
     try {
       const response = await axios.post(
-        'http://localhost:4500/api/clients',
+        'https://apifrwrd.smplyrefer.com/api/clients',
         data,
       
       );

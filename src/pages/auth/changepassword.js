@@ -31,7 +31,7 @@ const ChangePassword = () => {
     }
 
     try {
-      const res = await axios.post(`http://localhost:4500/api/changepassword/${id}`, {
+      const res = await axios.post(`https://apifrwrd.smplyrefer.com/api/changepassword/${id}`, {
         newPassword: password
       });
 

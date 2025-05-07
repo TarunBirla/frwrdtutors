@@ -5,19 +5,19 @@ import { Link } from 'react-router-dom';
 
 const BookingAssessment = () => {
 
-  const [slot, setSlot] = useState(null); // Use null as default
-
-  useEffect(() => {
-    const storedSlot = localStorage.getItem("slots");
-    if (storedSlot) {
-      try {
-        const parsedSlot = JSON.parse(storedSlot);
-        setSlot(parsedSlot);
-      } catch (err) {
-        console.error("Invalid JSON in localStorage:", err);
+   const [slots, setSlots] = useState([]);
+  
+    useEffect(() => {
+      // Get slots
+      const storedSlots = localStorage.getItem("successshowdata");
+      if (storedSlots) {
+        try {
+          setSlots(JSON.parse(storedSlots));
+        } catch (err) {
+          console.error("Invalid JSON in successshowdata:", err);
+        }
       }
-    }
-  }, []);
+    }, []);
 
 
   return (
@@ -37,7 +37,10 @@ const BookingAssessment = () => {
         <Link to='/getway'>
         <h3>Assessment</h3>
         </Link>
-        {slot && (
+        {slots.length > 0 ? (
+            slots.map((entry, index) => {
+              const { slot, tutor } = entry;
+              return (
         <div className="assessment-info">
           <div className="info-row">
             <span className="icon">📅</span>
@@ -67,8 +70,19 @@ const BookingAssessment = () => {
               <div className="label">Subject</div>
             </div>
           </div>
+          <div className="info-row">
+            <span className="icon">👨‍🏫</span>
+            <div>
+              <strong>{tutor.first_name} {tutor.last_name}</strong>
+              <div className="label">Tutor</div>
+            </div>
+          </div>
         </div>
-      )}
+      );
+    })
+  ) : (
+    <p>No blocked classes found.</p>
+  )}
       </div>
 
       {/* <div className="section">

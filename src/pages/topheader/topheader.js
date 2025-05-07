@@ -28,24 +28,24 @@ const navigate =useNavigate();
     <>
       <nav className="navbar navbar-expand-lg navbar-light bgcolorheader">
         <FaBars className="menu-icon d-lg-none mr-3" onClick={toggleMenu} />
-        <a className="navbar-brand" href="#">
+        <a className="navbar-brand" href="/dashbord">
           <img src={logo} alt="Logo" className="logoimage" />
         </a>
 
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ml-auto d-none d-lg-flex align-items-center">
             <li className="nav-item">
-              <a className="nav-link text-white d-flex align-items-center" href="#">
+              <a className="nav-link text-white d-flex align-items-center" href="/reschedule">
                 <FaCalendarAlt className="mr-2" /> Manage Class
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link text-white d-flex align-items-center" href="#">
+              <a className="nav-link text-white d-flex align-items-center" href="/dashbord">
                 <FaPlusCircle className="mr-2" /> New Booking
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link text-white d-flex align-items-center" href="#">
+              <a className="nav-link text-white d-flex align-items-center" href="/">
                 <FaSyncAlt className="mr-2" /> Renew
               </a>
             </li>

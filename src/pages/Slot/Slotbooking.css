@@ -95,6 +95,11 @@
     cursor: pointer;
   }
   
+  .booked-slot {
+    background-color: #f44336 !important; /* Red */
+    color: white;
+    cursor: not-allowed;
+  }
   .slot-card {
     background: #f9f9f9;
     padding: 10px;
